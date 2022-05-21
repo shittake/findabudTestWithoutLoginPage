@@ -7,7 +7,11 @@ const Account = () => {
 
   return (
     <>
-      <h1> Please key in your name, indicate your gender and preferences. </h1>
+      <h1>
+        <center>
+          Please key in your name and indicate your gender and preferences.{" "}
+        </center>
+      </h1>
       <div aria-live="polite">
         <form className="form-widget">
           <div>Email: {"whatever@gmail.com"}</div>
@@ -24,7 +28,7 @@ const Account = () => {
             <label htmlFor="website">Preferences</label>
             <input
               id="website"
-              type="url"
+              type="text"
               value={website || ""}
               onChange={(e) => setWebsite(e.target.value)}
             />
@@ -38,7 +42,7 @@ const Account = () => {
           className="button block"
           onClick={() => supabase.auth.signOut()}
         >
-          Sign Out!
+          Sign Out
         </button>
       </div>
     </>
